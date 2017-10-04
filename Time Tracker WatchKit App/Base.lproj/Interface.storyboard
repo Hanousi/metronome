@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Time_Tracker_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="left" image="100BPM" id="sNo-wS-46v"/>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="uTA-6b-9Vs">
+                            <items>
+                                <button width="64" alignment="left" title="Down" id="iHf-jF-Ma9">
+                                    <connections>
+                                        <action selector="downTapped" destination="AgC-eL-Hgc" id="JkX-rb-Rml"/>
+                                    </connections>
+                                </button>
+                                <button width="64" alignment="right" title="Up" id="mT3-9a-jPd">
+                                    <connections>
+                                        <action selector="upTapped" destination="AgC-eL-Hgc" id="jzq-1g-AGb"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="displayBPM" destination="sNo-wS-46v" id="C4c-eV-B9F"/>
+                        <outlet property="downTapped" destination="iHf-jF-Ma9" id="oAC-g6-ola"/>
+                        <outlet property="upTapped" destination="mT3-9a-jPd" id="fMb-EM-API"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
